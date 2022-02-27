@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %} {% block
+content %}
+<section class="see__favorites">
+	<img src="{{data.image}}" alt="" width="50%" height="200px" />
+	<section>
+		<h3>
+			Added <span class="favorite__place__name">{{data.name}}</span> to list of
+			favorites!
+		</h3>
+	</section>
+</section>
+{% endblock %}

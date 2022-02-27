@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block script %} {% if result %}
+<script type="text/javascript">
+	const lng = "{{ data.lng }}";
+	const lat = "{{ data.lat }}";
+	const end = "{{data.end}}";
+</script>
+<script type="text/javascript" src="../static/app.js"></script>
+{% endif %} {% endblock %}{% block title %} business info {% endblock %} {%
+block content %}
+<form action="/users/search">
+	<input
+		type="text"
+		name="restaurant"
+		placeholder="African store, African restaurant..."
+	/>
+	<input type="text" name="location" placeholder="Near" />
+	<input type="submit" value="Search" />
+</form>
+<h2>{{result.name}}</h2>
+<div class="display_biz__info">
+	<img src="{{result.image_url}}" alt="" width="100%" height="200px" />
+
+	<section class="display__info">
+		<p>{{result.display_phone}}</p>
+		<i class="fas fa-phone-volume"></i>
+	</section>
+	<section class="display__info">
+		<p>Get directiions <i class="fas fa-directions"></i></p>
+		<p>{{result.location.display_address[0]}}</p>
+	</section>
+</div>
+
+<div class="map__section">
+	<div id="map"></div>
+	<div id="sidebar"></div>
+</div>
+<div>
+	<div id="floating-panel">
+		<label for="start" id="nav__start"
+			><h3>Start from:</h3>
+			<input id="start" type="text" />
+		</label>
+		<div class="nav__end">
+			<h3 class="nav__name">
+				<i class="fas fa-map-marker"></i> {{result.name}}
+			</h3>
+			<div>
+				<h3 class="nav__address">{{result.location.display_address[0]}}</h3>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

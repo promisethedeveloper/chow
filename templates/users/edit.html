@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %} Edit {% endblock %} {% block content
+%}
+
+<form method="POST" class="edit__user__form">
+	{{form.hidden_tag()}} {% for field in form if field.widget.input_type !=
+	'hidden' %} {{field.label}} {{field(class_="form-control")}} {% for err in
+	field.errors %}
+	<b class="text-danger">{{ error }}</b>
+	{% endfor %} {% endfor %}
+	<a href="/" class="cancel">Cancel</a>
+	<button class="update" type="submit">Update</button>
+</form>
+
+{% endblock %}

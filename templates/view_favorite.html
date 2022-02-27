@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %} Favorites {% endblock %} {% block
+content %} {% if main_fav %}
+<h2 class="welcome">Your favorites!</h2>
+<div class="data__info__container">
+	{% for data in main_fav %}
+	<div class="data__info">
+		<img src="{{data.image_url}}" alt="..." width="100%" height="200px" />
+		<h4>{{data.name}}</h4>
+		<section class="business__info">
+			<a class="business__more__info" href="/business/{{data.id}}">More info</a>
+		</section>
+
+		<section class="business__info">
+			<a class="business__add__fav" href="/favorites/{{data.id}}/delete"
+				>Remove from Favorite</a
+			>
+		</section>
+	</div>
+
+	{% endfor %} {% else %}
+	<h4 class="welcome__nofav">You have no favorite.</h4>
+	{% endif %}
+</div>
+
+{% endblock %}

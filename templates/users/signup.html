@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../static/form.css" />
+		<title>Signup form</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1 class="sign__up">Signup</h1>
+			</header>
+			<section class="sign__up__form">
+				<form method="POST">
+					{{form.hidden_tag()}} {% for field in form if field.widget.input_type
+					!= 'hidden' %}
+
+					<p>{{field.label}} {{field(class_="form-control")}}</p>
+					{% for error in field.errors %}
+					<p class="form-text text-danger">{{error}}</p>
+					{% endfor %} {% endfor %}
+
+					<button class="sign__up__btn" type="submit">Signup</button>
+				</form>
+				<h4>Already on Chow? <a href="/login">Log in</a></h4>
+			</section>
+			<footer>&copy; Promise Morka</footer>
+		</main>
+	</body>
+</html>

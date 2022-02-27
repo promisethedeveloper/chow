@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.go__back__to__homepage {
+	margin-top: 20px;
+}
+
+h1 {
+	color: #041562;
+}
+
+.welcome {
+	margin-bottom: 10px;
+}
+
+.welcome__nofav {
+	color: #da1212;
+}
+
+.chow {
+	text-decoration: none;
+}
+
+.flashes {
+	background-color: green;
+}
+
+li.login {
+	background-color: white;
+	color: black;
+	display: inline-block;
+	margin: 5px;
+	font-weight: 500;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+li.signup {
+	background-color: red;
+	display: inline-block;
+	margin: 5px;
+	font-weight: 500;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+ul.nav__favorite {
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+}
+
+.favorite__line {
+	text-decoration: none;
+	margin: 15px;
+}
+
+.logout__line {
+	text-decoration: none;
+	color: #11468f;
+	border-bottom: 2px solid #041562;
+}
+
+.username__line {
+	color: #11468f;
+	border-bottom: 2px solid #041562;
+	font-weight: 700;
+}
+
+.favorite__line {
+	color: #11468f;
+	font-weight: 500;
+}
+
+a.logout__line:hover {
+	color: #da1212;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #eeeeee;
+	min-width: inherit;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 7px 15px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.login > a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 10px;
+}
+.signup > a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 10px;
+}
+
+.header__nav {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
+.form__section {
+	border: 2px solid cyan;
+	padding: 0;
+	margin: 0;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border-radius: 4px;
+}
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+input[type="submit"] {
+	width: 40%;
+	background-color: #da1212;
+	color: white;
+	padding: 7px 15px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: large;
+}
+
+/* NEW */
+main,
+header,
+section,
+aside,
+footer {
+	padding: 20px;
+	color: black;
+}
+
+.header__nav {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+main {
+	background: white;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+section > div {
+	text-transform: uppercase;
+	color: white;
+	color: black;
+	margin: 15px;
+}
+
+.favorite {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: red;
+	display: flex;
+}
+
+.display__info {
+	padding: 0;
+	border: 1px solid grey;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+.data__info {
+	background-color: #eeeeee;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.map__section {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#map {
+	max-width: 100%;
+	height: 300px;
+	border: 5px solid green;
+	margin: 0;
+}
+
+#sidebar {
+	flex-basis: 15rem;
+	flex-grow: 1;
+	padding: 1rem;
+	max-width: 30rem;
+	height: 100%;
+	overflow: auto;
+}
+
+#nav__start {
+	color: black;
+	font-weight: 500;
+}
+
+#floating-panel {
+	background-color: whitesmoke;
+}
+
+.nav__name {
+	color: #0073bb;
+	font-weight: 500;
+	line-height: 18px;
+	font-size: 14px;
+}
+
+.fa-map-marker {
+	color: red;
+}
+
+.business__info {
+	padding: 0;
+}
+
+.business__more__info {
+	background-color: #11468f;
+	color: white;
+	padding: 2px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5%;
+	margin-top: 5px;
+}
+
+.business__add__fav {
+	background-color: #da1212;
+	color: white;
+	padding: 2px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h5 {
+	/* font-size: large; */
+	background-color: #eeeeee;
+	border-radius: 5px;
+	display: inline;
+	color: black;
+}
+
+h3 {
+	color: #11468f;
+}
+
+.capstone__heading {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+	main {
+		display: flex;
+		flex-direction: column;
+		width: 75%;
+		margin: auto;
+	}
+
+	/* ##################### SEARCH FORM STYLES ########################## */
+	form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.welcome {
+		text-transform: uppercase;
+	}
+
+	input[type="submit"] {
+		width: 10%;
+		background-color: #da1212;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	input[type="text"] {
+		width: 50%;
+		padding: 12px 20px;
+		border-radius: 4px;
+	}
+	/* ##################### SEARCH FORM STYLES ########################## */
+
+	/* ##################### MAIN CONTENT STYLES ########################## */
+
+	.data__info__container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.data__info {
+		width: 50%;
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.data__info__favorite {
+		width: 50%;
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	/* ##################### MAIN CONTENT STYLES ########################## */
+
+	/* ##################### MORE INFORMATION ABOUT BUSINESS ############## */
+	.display_biz__info {
+		display: flex;
+		/* background-color: red; */
+		justify-content: space-between;
+	}
+
+	.display__info {
+		flex-grow: 1;
+	}
+
+	.display_biz__info > img {
+		width: 400px;
+		height: 400px;
+	}
+
+	.days {
+		display: flex;
+		flex-direction: row;
+		background-color: yellowgreen;
+	}
+	.edit__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.see__favorites {
+		display: flex;
+	}
+
+	.favorite__place__name {
+		color: #da1212;
+		text-transform: uppercase;
+	}
+
+	.edit__user__form {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+
+	.update {
+		width: 10%;
+		background-color: #041562;
+		color: white;
+		padding: 5px 5px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.cancel {
+		width: 10%;
+		background-color: #da1212;
+		color: white;
+		padding: 5px 5px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+	}
+}

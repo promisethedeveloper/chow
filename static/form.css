@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border-radius: 4px;
+}
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+input[type="submit"] {
+	width: 30%;
+	background-color: #da1212;
+	color: white;
+	padding: 5px 5px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* NEW */
+main,
+header,
+section,
+aside,
+footer {
+	padding: 10px;
+	color: black;
+}
+
+main {
+	color: #041562;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+	color: #0073bb;
+}
+
+.sign__up__btn {
+	width: 30%;
+	background-color: #da1212;
+	color: white;
+	padding: 5px 5px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.sign__up {
+	color: #041562;
+}
+
+.log__in {
+	color: #041562;
+}

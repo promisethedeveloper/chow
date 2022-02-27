@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %} {% block
+content %}
+
+<h3 class="welcome">African Restaurants and Stores, closest to you</h3>
+<div class="form__div">
+	<form action="/users/search">
+		<input
+			type="text"
+			name="restaurant"
+			placeholder="Enter African store, African restaurant..."
+		/>
+		<input type="text" name="location" placeholder="Near" />
+		<input type="submit" value="Search" />
+	</form>
+</div>
+
+<div class="favorite">
+	{% if result %}
+	<h2>Best {{term}} in {{location}}</h2>
+	{% endif %}
+</div>
+<div class="data__info__container">
+	{% if result %} {% for data in result %}
+	<div class="data__info">
+		<img
+			src="{{data.image_url}}"
+			alt="image_of_the_business"
+			width="100%"
+			height="200px"
+		/>
+		<h5>{{data.name}}</h5>
+		<section class="business__info">
+			<a class="business__more__info" href="/business/{{data.id}}">More info</a>
+		</section>
+
+		<section class="business__info">
+			<a class="business__add__fav" href="/business/favorite/{{data.id}}"
+				>Add to Favorite</a
+			>
+	</div>
+	{% endfor %} {% endif %}
+</div>
+
+{#
+<footer>&copy; Promisethedeveloper</footer>
+#} {% endblock %}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/static/app.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css"
+			integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		{% block script %} {% endblock %}
+
+		<title>{% block title %}{% endblock %} - capstone</title>
+	</head>
+	<body>
+		<main>
+			<div class="main__header__nav">
+				<a href="/" class="chow">
+					<h1>CHOW</h1>
+				</a>
+				<header class="header__nav">
+					<nav>
+						{% if session['user_id'] %}
+						<ul class="nav__favorite">
+							<li><a class="favorite__line" href="/favorites">Favorites</a></li>
+							<li>
+								<div class="dropdown">
+									<p class="username__line dropbtn">
+										{{session['first_name']}}
+									</p>
+
+									<div class="dropdown-content">
+										<a href="/users/edit">Edit User</a>
+										<a class="logout__line" href="/logout">Logout</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						{% else %}
+						<ul>
+							<li class="login">
+								<a href="/login">Log In</a>
+							</li>
+							<li class="signup">
+								<a href="/signup">Sign Up</a>
+							</li>
+						</ul>
+						{% endif %}
+					</nav>
+				</header>
+			</div>
+			<div class="main__content">{% block content %}{% endblock %}</div>
+		</main>
+
+		<script src="/static/app.js"></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqQoZFeIQQvVzKgPuqcOR6PmXkSpMjmoo&callback=initMap&libraries=&v=weekly"
+			async
+		></script>
+	</body>
+</html>
