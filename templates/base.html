@@ -57,9 +57,6 @@
 		</main>
 
 		<script src="/static/app.js"></script>
-		<script
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqQoZFeIQQvVzKgPuqcOR6PmXkSpMjmoo&callback=initMap&libraries=&v=weekly"
-			async
-		></script>
+		{% block map %} {% endblock %}
 	</body>
 </html>

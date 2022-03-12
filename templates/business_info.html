@@ -50,4 +50,9 @@ block content %}
 		</div>
 	</div>
 </div>
-{% endblock %}
+{% block map %}
+<script
+	src="https://maps.googleapis.com/maps/api/js?key={{google_map_key}}&callback=initMap&libraries=&v=weekly"
+	async
+></script>
+{% endblock %} {% endblock %}

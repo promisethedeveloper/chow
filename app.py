@@ -2,24 +2,29 @@ from flask import Flask, render_template, redirect, session, flash, request, abo
 from flask_debugtoolbar import DebugToolbarExtension
 from models import connect_db, db, User, Business
 from forms import SignUpForm, LoginForm, EditUserForm
-import requests
-import os
-from secret import headers
+import requests, os, json
 from dotenv import load_dotenv
 load_dotenv()
 
-
 app = Flask(__name__)
+
 
 uri = os.environ.get('DATABASE_URL', 'postgresql:///first_capstone_db')
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
-    
+
+secret = os.environ["SECRET_KEY"]
+headers = dict(json.loads(os.environ["HEADERS"]))
+google_map_key = os.environ["GOOGLE_MAP_KEY"]
+
+
+
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ECHO"] = True
-app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY', 'hellosecret1')
+app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY', secret)
 app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
+
 
 connect_db(app)
 
@@ -136,6 +141,7 @@ def process_user_edit():
 def searchYelp():
     """Search Yelp API."""
 
+    
     term = request.args["restaurant"]
     location = request.args["location"]
 
@@ -161,7 +167,7 @@ def biz_info(business_id):
     result = res.json()
     if result:
         data = {"lat": result["coordinates"]["latitude"], "lng": result["coordinates"]["longitude"], "end": result["location"]["display_address"][0]}
-    return render_template("business_info.html", result=result, data=data)
+    return render_template("business_info.html", result=result, data=data, google_map_key=google_map_key)
 
 
 @app.route("/business/favorite/<business_id>")
