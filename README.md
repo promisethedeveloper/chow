@@ -20,3 +20,28 @@ The features that make my website CRUD, is the ability to add a particular store
 The link to my API [yelp](https://www.yelp.com/developers/documentation/v3/get_started)
 
 ![This is an image](/static/images/database-ddl.png)
+
+## Promise-chow
+
+[Promise-chow](https://promise-chow.herokuapp.com/) is a website that returns the locations of African stores and African restaurants to Users. It provides google maps for easy naviagation to locations of their choice. Users are able to add stores/restaurants to a list of favorites and access them at any time.
+
+Users will have to sign up to be able to make searches on the website. After searches are made, Users can select a particular location to go to and add the location to their list of favorites if they wish. Locations added to favorites can also be removed at any time.
+
+The technologies used for the building of the website are HTML, CSS, JavaScript, Flask, Flask-SQLAlchemy and PostgreSQL.
+
+## Installation
+
+1. Clone the repository
+   ```
+   $ git clone https://github.com/promisethedeveloper/first_capstone.git
+   ```
+2. Create a python virtual environment and activate it (it is a good practice but it is not required)
+   ```
+   $ cd first_capstone
+   $ python3 -m venv venv
+   $ source venv/bin/activate
+   ```
+3. Install the requirements
+   ```
+   $ pip install -r requirements.txt
+   ```
