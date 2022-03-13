@@ -45,3 +45,13 @@ The technologies used for the building of the website are HTML, CSS, JavaScript,
    ```
    $ pip install -r requirements.txt
    ```
+4. Run the app
+   ```
+   $ flask run
+   ```
+
+## Running the test
+
+    ```
+    $ python -m unittest
+    ```
