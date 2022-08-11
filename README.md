@@ -9,7 +9,7 @@ The demography of the users of my website are people who are interested in Afric
 I plan on using data from the Yelp Fusion API to get information about the stores and restaurants.
 
 My data schema design will have a users, businesses, and favorites table. The relationship between the users and businesses tables will be a many-to-many relationship. The favorites table will be the join table that will create the many-to-many relationships.
-My users' table will store the first name, last name, email address, and password of a user. The password will be hashed using bycrpt to make sure that the user’s password is never compromised. My businesses table will store the yelp API id of a store/restaurant.
+My users' table will store the first name, last name, email address, and password of a user. The password will be hashed using bcrypt to make sure that the user’s password is never compromised. My businesses table will store the yelp API id of a store/restaurant.
 
 The user flow of my website will be a User inputting name of the store/restaurant and location. A page of stores/restaurants that match the inputs is returned to them, they can select a particular store, get the address of the store, and a google map that can take them to the store’s address is shown to them. Users can also add stores/restaurants to their favorites and retrieve them whenever they want.
 
