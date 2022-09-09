@@ -1,4 +1,4 @@
-# Project proposal
+# Chow
 
 It can be very challenging to find African stores or African restaurants when one is not in an African country. Researchers have submitted that finding African food or African restaurants in the United States can be a challenge for visitors, emigrants, and general lovers of African food and culture.
 
